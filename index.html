@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/lato-font.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+       <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.css"
+      integrity="sha512-+Zybl5OKqmaXx42ysgDdEODFRj8kLRQFy87G77NWmQxS8JMiQhDKovhffSaUuMDyaKxZOZrzouVbQMtBrUcv7w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="./js/index.js"></script>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/signup.css" />
+
+    <title>Intervetion Gap System</title>
+  </head>
+
+
+  </script>
+  <body>
+    <div class="content">
+        <div id="navbar" class="navbar sticky">
+            <div id="nav-igs" class="nav-links"><a href="/"><h2>Intervetion Gap System</h2></a></div>
+            <div id="login-signup" class="nav-links">
+              <a onclick="userAgreement()" id="signuplink"   href="#/register">Register</a>
+              <a onclick="switchLogin()" id="loginlink"   href="#/login">Login</a>
+            </div>
+        </div>
+
+        <div class="middle-section">
+
+          <div class="login-error">
+
+            <div class="login-error-title">
+              <h4>Problem Description</h4>
+            </div>
+               <form onsubmit="closeLoginHelp()"  class="" action="">
+                  
+
+
+                <div class="input-group">
+                               <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                     <textarea  type="text" name="issue" placeholder="Do You Have An Issues? Give a discription" required > </textarea>
+                     
+                      <span  id="forget-phone-error" class="error-message"></span>
+                </div>
+
+                 <div class="btns-group">
+                   
+                    <a id="login-error-cancel" href="#"  onclick="closeLoginHelp()" class="btn">Cancel</a>
+                     <button id="" type="submit" href="#" class="btn"><h3>Submit</h3></button>
+                  </div>
+                  
+              </form>
+          </div>
+
+
+            <div id="login" class="login-form form-active">
+                <h1>Login</h1>
+                <div class="form">
+                  <form action="" method="post">
+                    <div class="input">
+                      
+                      <input class="text-input" type="text" name="userID" required>
+                      <label for="idnumber">ID number or Number Phone</label>
+                    </div>
+
+                    <div class="input">
+                      
+                      <input t class="text-input" type="password" name="password" required>
+                      <label for="password">Password</label>
+                    </div>
+
+                    <a onclick="forgetPassword()" style="width: fit-content;" href="#recovery"><h4>Forgot Password?</h4></a>
+
+                    <div class="login-btn">
+                       <button type="submit"><h3>Login</h3></button>
+                    </div>
+
+                    <div class="login-form-links">
+                     <div class="login-form-links1"> <h4><a onclick="openLoginHelp()" href="#">Need Help to Login?</a></h4></div>
+                     <div class="login-form-links2"> <h4><a onclick="userAgreement()" href="#">Register</a></h4></div>
+                    </div>
+                  </form>
+                </div>
+                  
+            </div>
+
+            <div class="enduser-agreement">
+
+              <h3>Terms and Conditions</h3>
+
+              <div class="terms-info-box">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+              </div>
+
+              <div class="btns-group">
+
+
+              <a href="#" onclick="closeuserAgreement()" id = "disagreed" class="btn">Disagree</a>
+              <a href="#" onclick="switchSignUp()" id= "agreed" class="btn">Agree</a>
+
+
+              </div>
+            </div>
+
+            <div id="signup" class="signup-form ">
+  
+              <form  method="post" action="#" name="Form" onsubmit="return validateForm()"  class="form">
+                    <h2>Registration Form</h2>
+
+                    <!-- Progress bar -->
+                    <div class="progressbar">
+                    <div class="progress" id="progress"></div>
+
+                    <div
+                    class="progress-step progress-step-active"
+                    data-title="Personal Details"></div>
+                    <div class="progress-step" data-title="Education Details"></div>
+                    <div class="progress-step" data-title="Contact Details"></div>
+                    <div class="progress-step" data-title="Finalise"></div>
+                    </div>
+
+                    <h3 id="proceed-error" class ="proceed-error">Please Provide Valid Input First Before Proceeding</h3>
+
+                    <!-- Step 1 -->
+                    <div id="1" data-step="1" class="form-step form-step-active">
+                    <div class="input-group">
+                    <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                    <input  id="fname"  class="text-input" type="text" name="first_name" required>
+                    <label for="first_name">First Name:</label>
+                    <span id="empty-input-group-error1" class="empty-input-group-error">Please Fill in This field</span>
+                    <span id="fname-error" class="error-message">
+                    </span>
+                    </div>
+
+                    <div class="input-group">
+                    <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <input id="lname"  class="text-input" type="text" name="lname" required>
+                    <label for="last_name">Last Name:</label>
+                    <span id="empty-input-group-error2" class="empty-input-group-error">Please Fill in This field</span>
+                    <span id="lname-error" class="error-message">
+
+                    </div>
+
+                    <div class="input-group">
+                    <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <input id="national_id" class="text-input" type="text" name="nationalID" required>
+                    <label for="nationalID">National ID:</label>
+                    <span id="empty-input-group-error3" class="empty-input-group-error">Please Fill in This field</span>
+                    <span id="id-error" class="error-message">
+
+                    </div>
+
+                    <div class="input-group">
+                    <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                    <input id="dob"  style="margin-top: 30px; padding-bottom: 10px;"   class="text-input" type="date" name="dob" required>
+
+                    <label for="dob">Date Of Birth:</label>
+                    <span id="empty-input-group-error4" class="empty-input-group-error">Please Fill in This field</span>
+
+                    </div>
+
+                    <div class="input-group">
+                    <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                          <input id="location" class="text-input" type="text" name="location" required>
+                          <label for="location">Location:</label>
+                          <span id="empty-input-group-error5" class="empty-input-group-error">Please Fill in This field</span>
+                          <span  id="location-error" class="error-message">
+                    </div>
+
+
+                    <div class="input-group-radio">
+                    <h4>Gender:</h4>
+                    <input id="male" type="radio" name="gender" value="male" >
+                    <label for="male">Male</label>
+                    <input id="female" type="radio" name="gender" value="female" >
+                    <label for="female">Female</label>
+                    </div>
+
+
+
+
+                    <div class="btns-group">
+                    <a id="next" href="#" class="btn btn-next width-50 ml-auto">Next</a>
+                    </div>
+                    </div>
+
+
+                    <!-- step 2 -->
+                    <div id="2" class="form-step">
+
+                    <div id="school_check" class="input-group-check">
+                    <h4>Are You Currently At A School?</h4>
+                    <input style="margin-left: 20px;" type="checkbox" name="education_status" id="yes" value="yes"  onClick="checkboxChange_Sc(this)" >
+                    <label  for="yes">Yes</label>
+                    <input class="school-check" type="checkbox" name="education_status" id="no" value="no"  onClick="checkboxChange_Sc(this)" >
+                    <label for="no">No</label>
+                    </div>
+
+
+                    <div  class="input-group">
+                    <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                    <input id ="school_name" class="text-input" type="text" name="schoolName" readonly>
+                        <span id="empty-input-group-error6" class="empty-input-group-error">Please Fill in This field</span>
+                          <span  id="school-error" class="error-message">
+
+                    </div>
+
+                    <div class="input-group">
+                    <div class="select-wrapper">
+                      
+                    <select  name="level" id="level" class="custom-select level" placeholder="Select Level">
+                      <option value="degree">Bachelor's Degree</option>
+                      <option value="diploma">Diploma</option>
+                      <option value="MSCE">MSCE</option>
+                      <option value="other">Other</option>
+                    </select>
+
+                    <label  id="level"  for="level">Highest Education Level Achived:</label>
+                    </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="btns-group">
+                    <a href="#" class="btn btn-prev">Previous</a>
+                    <a href="#" class="btn btn-next">Next</a>
+                    </div>
+                    </div>
+
+
+
+                    <!-- step 3 -->
+
+                    <div id="3" class="form-step">
+                    <div class="input-group">
+                    <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                    <input id="phone-number"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"  class="text-input" type="text" name="phone Number" required>
+                    <label for="password">Phone Number:</label>
+                    <span id="empty-input-group-error7" class="empty-input-group-error">Please Fill in This field</span>
+                    <span  id="phone-error" class="error-message">
+                    </div>
+
+                    <div class="input-group">
+                    <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                    <input id="optional-email" value="none" class="text-input" type="email" name="email" required>
+                    <label for="password">Email Address (If Any):</label>
+                    <span id="empty-input-group-error8" class="empty-input-group-error">Please Fill in This field</span>
+                    <span  id="email-error" class="error-message">
+                    </div>
+                    <div class="btns-group">
+                    <a href="#" class="btn btn-prev">Previous</a>
+                    <a href="#" class="btn btn-next">Next</a>
+                    </div>
+                    </div>
+
+
+
+                    <!-- step 4 -->
+                    <div id="4" class="form-step">
+                    <div id="help_check" class="input-group-check">
+                    <h4>How Can We Help:</h4>
+                    <input  type="checkbox" name="help" id="fees" value="fees"  onClick="checkboxChange_help(this)" >
+                    <label for="fees">School Fees</label>
+                    <input type="checkbox" name="help" id="business" value="business"  onClick="checkboxChange_help(this)" >
+                    <label for="business">Business Captial</label>
+                    <input type="checkbox" name="help" id="emproy" value="emproy"  onClick="checkboxChange_help(this)" >
+                    <label for="emproy">Employment</label>
+
+                    </div>
+
+
+                    <div class="input-group">
+                      <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                    <input class="text-input" type="password" name="password" required>
+                    <label for="password">Create a Password:</label>
+                    <span  id="password1-error" class="error-message">
+                    </div>
+                    <div class="input-group">
+                      <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                    <input class="text-input" type="password" name="Confirmpassword" required>
+                    <label for="ConfirmPassword">Confirm Password:</label>
+                    <span  id="password2-error" class="error-message"></span>
+                    </div>
+                    <div class="btns-group">
+                    <a href="#" class="btn btn-prev">Previous</a>
+                    <button type="submit" value="Done" onclick="validateForm()" class="btn"> <h3>Submit</h3></button>
+                    </div>
+                    </div>
+              </form>
+
+ 
+
+            </div>
+
+            <div class="forget-password">
+              <form id="forget-password-p1"  class="active-phase" action="">
+                <div class="input-group">
+                               <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                      <input id="forget-password" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="text-input" type="text" name="userID" required>
+                      <label for="idnumber">Phone Number</label>
+                      <span  id="forget-phone-error" class="error-message"></span>
+                </div>
+
+                 <div class="btns-group">
+                    <a id="p1submit" href="#" class="btn">Submit</a>
+                  </div>
+                  
+              </form>
+
+              <form id="forget-password-p2" class="inactive-phase" action="">
+
+                    <div class="input-group">
+                               <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                      <input id="codeEntry" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="text-input" type="number" name="userID" required>
+                      <label for="idnumber">Enter Recovery Code</label>
+                      <span  id="forget-phone-error" class="error-message"></span>
+                </div>
+
+                
+
+                 <div class="btns-group">
+                    <a id="resend-code" href="#" class="btn">Resend Code</a>
+                     <a id="p2submit" href="#" class="btn">Submit</a>
+                  </div>
+
+              </form>
+
+              <form id="forget-password-p3" class="inactive-phase" action="">
+
+                    <div class="input-group">
+                      <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                      <input id="forget-password" class="text-input" type="password" name="password1" required>
+                      <label for="idnumber">Enter New Password</label>
+                      <span  id="forget-phone-error" class="error-message"></span>
+                </div>
+
+                  <div class="input-group">
+                               <span id="failed" class="failed">
+                    <i  class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+
+                    <span id="success" class="success">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                      <input id="forget-password"  class="text-input" type="password" name="password2" required>
+                      <label for="idnumber">Confirm Password</label>
+                      <span  id="forget-phone-error" class="error-message"></span>
+                </div>
+
+                
+
+                 <div class="btns-group">
+                     <a id="next" href="#" class="btn">Save</a>
+                  </div>
+
+              </form>
+            </div>
+
+
+            
+
+        </div>
+
+        <div class="bottom-section">
+         <div class="bottom-top">
+           <div class="info-box">
+            <h2>Intervetion Gap System</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            
+          </div>
+
+          <div class="more-box">
+              <div class="more-links">
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Get In Touch</a></li>
+                  <li><a href="#">Events</a></li>
+                </ul>
+              </div>
+
+              <div class="social-links">
+                <ul>
+                  <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+          </div>
+         </div>
+          <footer>
+               © IGS <span id="year"></span>
+            </footer>
+        </div>
+
+
+
+    </div>
+
+
+
+  </body>
+</html>

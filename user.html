@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/lato-font.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+       <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.css"
+      integrity="sha512-+Zybl5OKqmaXx42ysgDdEODFRj8kLRQFy87G77NWmQxS8JMiQhDKovhffSaUuMDyaKxZOZrzouVbQMtBrUcv7w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="./js/index.js"></script>
+    <script defer src="./js/user.js"></script>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/signup.css" />
+    <link rel="stylesheet" href="styles/user.css">
+    <link rel="stylesheet" href="./styles/chatroom.css">
+
+    <title>Intervetion Gap System</title>
+  </head>
+
+
+  </script>
+
+
+              <!-- TO DO: THIS PART OF THE SYSTEM SHOULD YOU REAL TIME DATA FETCHING -->
+              <!-- TO DO: FIND A BACKEND SCRIPTING LANGUAGE THAT ENABLE REAL TIME FETCHING  -->
+              <!-- SINCE THIS IS MORE THAN JUST A WEB SITE I MADE IT LOOK LIKE A SIMPLE CHAT APP -->
+              <!-- SINGLE APP SITE IS FITTING FOR THIS PART NO NEED TO RELOAD IT SO GO WITH THE DESIGN BRO 🤣🤣 -->
+
+
+
+
+
+
+  <body>
+    <div id="user-content" class="content">
+      
+
+
+        <div id="user-navbar" class="navbar sticky">
+            <div class="user-circle">
+           <!-- TO DO: JUST USE USERS INITIALS DONT GET TOO FANCY WITH PROFILE PICS JUST INITIALS IS FINE -->
+          <!--  NO USER WILL SPEND MUCH TIME HERE SINCE MANY WONT HAVE DATA BUNDLES TO BE ONLINE FULL TIME -->       
+              
+              NJ
+             
+
+              <div class="dropdown" id="user-center">
+                <div id="help-container" class="drop-container">
+                  
+                  <div class="close">
+                  <header>Settings</header>
+                    <span  class="icon">
+                      <i id="close-user" class="fa fa-times-circle" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <form class="dropdown-form" action="">
+                    <div id="drop-input" class="input-group">
+                     <input type="password" placeholder="Create new password">
+                     <input type="password" placeholder="Confirm password">
+                     <div class="button-container">
+
+                       <a id="cancel-user" class="btn">Cancel</a>
+                       <button class="btn" type="submit"><h3>Submit</h3></button>
+                      
+                     </div>
+                    </div>
+                  </form>
+                </div>
+              
+              </div>
+              
+            </div>
+
+            <div onclick="openEvents()" id="events-trigger" class="navlink">
+              <span class="icon">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+              </span>
+              <span class="title">Events</span>
+
+              <div class="dropdown" id="events">
+                <div class="drop-container">
+                  <ul>
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">20 September 2022
+                      </span> 
+                      <span class="location">
+                         <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          Mzuzu
+                      </span>
+                    </li>
+
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">27 September 2022</span> 
+                      <span class="location"> 
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        Karonga
+                      </span>
+                    </li>
+
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">03 October 2022</span>
+                      <span class="location"> <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        Lilongwe
+                      </span>
+                    </li>
+
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">09 October 2022</span>
+                      <span class="location"> <i class="fa fa-map-marker" aria-hidden="true"></i> 
+                      Blantyre</span>
+                    </li>
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">13 October 2022
+                      </span> 
+                      <span class="location">
+                         <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          Mzimba
+                      </span>
+                    </li>
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">16 October 2022
+                      </span> 
+                      <span class="location">
+                         <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          Zomba
+                      </span>
+                    </li>
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">21 October 2022
+                      </span> 
+                      <span class="location">
+                         <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          Kasungu
+                      </span>
+                    </li>
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">25 October 2022
+                      </span> 
+                      <span class="location">
+                         <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          Nkhatabay
+                      </span>
+                    </li>
+                      
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div id="help-trigger" class="navlink">
+
+              <div onclick="openHelp()" class="help-top">
+                <span class="icon">
+                <i class="mdi mdi-chat-question"></i>
+               </span>
+               <span class="title">Help Center</span>
+              </div>
+
+              <div class="dropdown" id="help-center">
+                <div id="help-container" class="drop-container">
+                  
+                  <div class="close">
+                  <header>Help Center</header>
+                    <span  class="icon">
+                      <i id="closeHelp" class="fa fa-times-circle" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <form class="dropdown-form" action="">
+                    <div id="drop-input" class="input-group">
+                      <textarea  type="text" name="issue" placeholder="Do You Have An Issues? Give a discription" required > </textarea>
+                     <div class="button-container">
+
+                       <a id="cancel" class="btn">Cancel</a>
+                       <button class="btn" type="submit"><h3>Submit</h3></button>
+                      
+                     </div>
+                    </div>
+                  </form>
+                </div>
+              
+              </div>
+
+            </div>
+
+            <div id="igs" class="navlink">
+               <a href=""> Intervetion Gap System </a>
+            </div>
+
+            <div onclick="openNotifications()" id="notifications-trigger"  class="navlink">
+              <div id="user-badge" class="badge">
+                
+              </div>
+              
+              <span class="icon">
+                <i class="fa fa-bell" aria-hidden="true"></i>
+              </span>
+              <span class="title">Notifications</span>
+
+              <div class="dropdown" id="notifications">
+                <div  class="drop-container">
+                  <ul>
+                    <li>[User_name] Wants to join your club <span class="time">2 mins ago</span></li>
+                    <li>[User_name] Added you to [Club_name] <span class="time">2 mins ago</span></li>
+                    <li>[Club_name] is a new club in your area <span class="time">2 mins ago</span></li>
+                    <li>An event has started in your your area <span class="time">2 mins ago</span></li>
+                    <li>Welcome to The Intervetion Gap System <span class="time">1 hour ago</span></li>    
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+            
+
+            <div id="logout" class="navlink">
+              <a href=""> Logout </a>
+            </div>
+
+        </div>
+          <div class="mobile-navigation">
+            <div id="your-clubs-trigger" class="mobile-navitem">
+               <span class="icon">
+                <i class="mdi mdi-account-group"></i></span>
+              <span class="title">Your Clubs</span>
+             </div>
+
+              <div id="active-chatroom-trigger" class="mobile-navitem">
+               <span class="icon">
+               <i class="fa fa-comments" aria-hidden="true"></i></span>
+              <span class="title">Chat</span>
+             </div>
+
+             <div  id="search-box-trigger" class="mobile-navitem">
+               <span class="icon">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+              <span class="title">Search</span>
+             </div>
+
+            
+          </div>
+       
+
+        <div id="user-middle" class="middle-section">
+            
+
+
+            <div class="grid-item search-box">
+
+              <!-- TO DO: MAKE SURE YOU MAKE THIS A LIVE SEARCH DO NOT DIRECT TO ANOTHER PAGE
+              ALL RESULTS MUST BE DISPLAYED ON THE SEARCH ROW -->
+
+                 <div id="search-club" class="input-group">
+                    <input  class="search-txt" type="text" name="" placeholder="Search for a club">
+                    
+                    <a class="search-btn" href="#" >
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+
+                <div class="output">
+                  <div class="club">
+                      <div class="club-icon">
+
+                        <span><i class="mdi mdi-account-group"></i></span>
+                        
+                      </div>
+
+                      <div class="club-info">
+                        <span class="club-name">
+                            Mzuzu Youth Lift Me Up Club
+                        </span>
+
+                        <div class="club-bottom">
+                          <span class="club-members">
+                            Members: 200
+                        </span>
+
+                        <div class="club-location">
+                          Location: Mzuzu
+                        </div>
+                        </div>
+                      </div>
+
+                      <div id="join" class="club-actions">
+
+                          <div  class="actions join-club">
+                            <span><i class="mdi mdi-account-multiple-plus"></i></span>
+                            <span class="action-title">Leave Club</span>
+                          </div>
+                     </div>
+
+                     <div id="joined" class="club-actions">
+
+                          <div  class="actions join-club">
+                            <span><i class="fa fa-check" aria-hidden="true"></i></span>
+                            <span class="action-title">Joined</span>
+                          </div>
+                     </div>
+                  </div>
+                </div> 
+            </div>
+
+            
+
+           
+
+            <div class="grid-item belong-clubs">
+
+              <div id="club-overlay" class="club-overlay">
+                <div class="overlay-title">
+                  <h3>CREATE NEW CLUB</h3>
+                </div>
+                <form name="new-club" action="">
+                  <div id="create-club" class="input-group">
+                    
+                    <input placeholder="Enter Club Name" id="club-name" type="text" required>
+                    
+                    <input placeholder="Enter Club Location" id="club-location" type="text" required>
+                   
+                    <div class="button-container">
+
+                       <a id="cancel-create" class="btn cancel" type="submit"> Cancel </a>
+                       <button class="btn" type="submit"> <h3>Create</h3> </button>
+                      
+                    </div>
+                  </div>
+                </form>
+               </div>
+
+              <div class="belong-top">
+                <div class="grid-hearder">
+                 Your Clubs
+               </div>
+
+               
+
+               
+
+               <div id="add-club" class="add-club">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                 <span class="title">Create Club</span>
+               </div>
+
+              </div>
+
+              <div class="club">
+                <div class="club-icon">
+
+                  <span><i class="mdi mdi-account-group"></i></span>
+                  
+                </div>
+
+                <div class="club-info">
+                  <span class="club-name">
+                      Mzuzu Youth Lift Me Up Club
+                  </span>
+
+                  <div class="club-bottom">
+                    <span class="club-members">
+                      Members: 200
+                  </span>
+
+                  <div class="club-location">
+                    Location: Mzuzu
+                  </div>
+                  </div>
+                </div>
+
+                <div class="club-actions">
+
+                     <div class="actions leave-club">
+                      <i class="fa fa-sign-out" aria-hidden="true"></i>
+                      <span class="action-title">Leave Club</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="club">
+                <div class="club-icon">
+
+                  <span><i class="mdi mdi-account-group"></i></span>
+                  
+                </div>
+
+                <div class="club-info">
+                  <span class="club-name">
+                      Malawi Youth  Club
+                  </span>
+
+                  <div class="club-bottom">
+                    <span class="club-members">
+                      Members: 1040
+                  </span>
+
+                  <div class="club-location">
+                    Location: Mzuzu
+                  </div>
+                  </div>
+                </div>
+
+                <div class="club-actions">
+
+                     <div class="actions leave-club">
+                      <i class="fa fa-sign-out" aria-hidden="true"></i>
+                      <span class="action-title">Leave Club</span>
+                    </div>
+                </div>
+              </div>
+
+              
+             
+            </div>
+
+            <div class="grid-item chat-room active-screen">
+              <div class="convo-title">
+                [Active Club Name]
+              </div>
+
+               
+
+             <div class="conversation">
+                          
+              <div class="conversation-container">
+                <div class="message sent">
+                  Welcome to the club Y'all
+                  <span class="metadata">
+                      <span class="time"></span>
+                  </span>
+                </div>
+                <div class="message received">
+                  Thank you very much.
+                  <span class="metadata"><span class="time"></span></span>
+                </div>
+                <div class="message sent">
+                  I hope Y'all Feel at home here
+                  <span class="metadata">
+                      <span class="time"></span>
+                  </span>
+                </div>
+                <div class="message received">
+                  <span id="random">Definitely boss 🔥</span>
+                  <span class="metadata"><span class="time"></span></span>
+                </div>
+              </div>
+
+              <div class="compose-container absolute-position">
+                <div class="media">
+                      <input id="pick-img" type='file' style='display: none'>
+                          <button id="img-button">
+                            <i class="mdi mdi-camera"></i>
+                        </button>
+              </div>
+
+
+              <form class="conversation-compose">
+                
+                  
+                
+                <input class="input-msg" name="input" placeholder="Type a message" autocomplete="off" autofocus></input>
+                
+                <button onclick="" class="send">
+                    <div class="circle">
+                      <i class="mdi mdi-send"></i>
+                    </div>
+                  </button>
+              </form>
+              </div>
+            </div>
+            </div>
+        </div>
+
+        
+
+
+
+    </div>
+
+
+
+  </body>
+</html>

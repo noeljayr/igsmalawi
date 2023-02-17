@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/lato-font.css" />
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+       <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.css"
+      integrity="sha512-+Zybl5OKqmaXx42ysgDdEODFRj8kLRQFy87G77NWmQxS8JMiQhDKovhffSaUuMDyaKxZOZrzouVbQMtBrUcv7w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="./js/index.js"></script>
+    <script defer src="./js/user.js"></script>
+    <script defer src="./js/admin.js"></script>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/signup.css" />
+    <link rel="stylesheet" href="styles/user.css">
+    <link rel="stylesheet" href="./styles/chatroom.css">
+    <link rel="stylesheet" href="./styles/admin.css">
+
+    <title>Intervetion Gap System</title>
+  </head>
+
+
+  </script>
+
+
+              <!-- TO DO: THIS PART OF THE SYSTEM SHOULD YOU REAL TIME DATA FETCHING -->
+              <!-- TO DO: FIND A BACKEND SCRIPTING LANGUAGE THAT ENABLE REAL TIME FETCHING  -->
+              <!-- SINCE THIS IS MORE THAN JUST A WEB SITE I MADE IT LOOK LIKE A SIMPLE CHAT APP -->
+              <!-- SINGLE APP SITE IS FITTING FOR THIS PART NO NEED TO RELOAD IT SO GO WITH THE DESIGN BRO 🤣🤣 -->
+
+
+
+
+
+
+  <body>
+    <div class="content">
+      
+
+
+        <div id="admin-navbar" class="navbar sticky">
+            <div class="user-circle">
+           <!-- TO DO: JUST USE USERS INITIALS DONT GET TOO FANCY WITH PROFILE PICS JUST INITIALS IS FINE -->
+          <!--  NO USER WILL SPEND MUCH TIME HERE SINCE MANY WONT HAVE DATA BUNDLES TO BE ONLINE FULL TIME -->       
+              
+              NJ
+             
+
+              <div class="dropdown" id="user-center">
+                <div id="help-container" class="drop-container">
+                  
+                  <div class="close">
+                  <header>Settings</header>
+                    <span  class="icon">
+                      <i id="close-user" class="fa fa-times-circle" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <form class="dropdown-form" action="">
+                    <div id="drop-input" class="input-group">
+                     <input type="password" placeholder="Create new password">
+                     <input type="password" placeholder="Confirm password">
+                     <div class="button-container">
+
+                       <a id="cancel-user" class="btn">Cancel</a>
+                       <button class="btn" type="submit"><h3>Submit</h3></button>
+                      
+                     </div>
+                    </div>
+                  </form>
+                </div>
+              
+              </div>
+              
+            </div>
+
+            <div onclick="openEvents()" id="events-trigger" class="navlink">
+              <span class="icon">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+              </span>
+              <span class="title">Events</span>
+
+              <div class="dropdown" id="events">
+                <div class="drop-container">
+                  <ul>
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">20 September 2022
+                      </span> 
+                      <span class="location">
+                         <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          Mzuzu
+                      </span>
+                    </li>
+
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">27 September 2022</span> 
+                      <span class="location"> 
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        Karonga
+                      </span>
+                    </li>
+
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">03 October 2022</span>
+                      <span class="location"> <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        Lilongwe
+                      </span>
+                    </li>
+
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">09 October 2022</span>
+                      <span class="location"> <i class="fa fa-map-marker" aria-hidden="true"></i> 
+                      Blantyre</span>
+                    </li>
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">13 October 2022
+                      </span> 
+                      <span class="location">
+                         <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          Mzimba
+                      </span>
+                    </li>
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">16 October 2022
+                      </span> 
+                      <span class="location">
+                         <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          Zomba
+                      </span>
+                    </li>
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">21 October 2022
+                      </span> 
+                      <span class="location">
+                         <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          Kasungu
+                      </span>
+                    </li>
+
+                    <li>
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      <span class="date">25 October 2022
+                      </span> 
+                      <span class="location">
+                         <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          Nkhatabay
+                      </span>
+                    </li>
+                      
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div id="help-trigger" class="navlink">
+
+              <div id="nav-help-trigger" class="help-top">
+                <span class="icon">
+                <i class="mdi mdi-chat-question"></i>
+               </span>
+               <span class="title">Help Center</span>
+              </div>
+
+             
+
+            </div>
+
+            <div id="igs" class="navlink">
+               <a href=""> Intervetion Gap System </a> <span class="user-type">Admin</span> 
+            </div>
+
+            <div  onclick="openNotifications()" id="notifications-trigger" class="navlink">
+              <div id="notification-badge" class="badge">
+                
+              </div>
+              
+              <span class="icon">
+                <i class="fa fa-bell" aria-hidden="true"></i>
+              </span>
+              <span class="title">Notifications</span>
+
+              <div class="dropdown" id="notifications">
+                <div  class="drop-container">
+                  <ul>
+                    <li>[User_name] is a new registered user <span class="time">2 mins ago</span></li>
+                    <li>[User_name] is a new registered user <span class="time">2 mins ago</span></li>
+                  
+                     </ul>
+                </div>
+
+              </div>
+            </div>
+
+            
+
+            <div id="logout" class="navlink">
+              <a href=""> Logout </a>
+            </div>
+
+        </div>
+
+            <div id="admin-overlay"  class="admin-overlay">
+
+                <div id="events-form" class="events-form">
+                  <div class="close">
+                     <i id="close-event-form" class="fa fa-times-circle" aria-hidden="true"></i>
+                  </div>
+                    <form action="">
+                      <div class="input-group">
+                          <input name="event-location" type="text" placeholder="Event Location">
+                          <input name="even-date" type="date" placeholder="Date">
+
+                          <div class="button-container">
+
+                            <a id="cancel-events-form" class="btn">Cancel</a>
+                            <button class="btn" type="submit"><h3>Add</h3></button>
+                            
+                          </div>
+                     </div>
+                    </form>
+                </div>
+
+
+
+                <div id="admins" class="admins">
+                  <!-- <div class="admins-issues-top">
+                    <div class="title-header">
+                      <h3>Admins</h3>
+                    </div>
+                    <div class="close">
+                     <i id="close-reported" class="fa fa-times-circle" aria-hidden="true"></i>
+                  </div>
+                  </div> -->
+                  
+
+                  <div class="admins-info">
+                    <div class="admin">
+                      
+                    </div>
+                  </div>
+
+
+
+                </div>
+
+
+                <div id="report-issues" class="report-issues">
+                  <div class="reported-issues-top">
+                    <div class="title-header">
+                      <h3>Reported Issues</h3>
+                    </div>
+                    <div class="close">
+                     <i id="close-reported" class="fa fa-times-circle" aria-hidden="true"></i>
+                  </div>
+                  </div>
+                   <ul>
+                    <li class="issue"><span class="user-name">[user-name]</span> (0889340008)  <br> <span class="problem-descript">problem description</span>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    
+                    <br><span class="time-reported"><i class="fa fa-clock-o" aria-hidden="true"></i> 2 minutes ago</span>
+                    </li>
+                    <li class="issue"><span class="user-name">[user-name]</span> (0889340008)  <br> <span class="problem-descript">problem description</span>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut tempora officiis possimus porro? Dicta est officiis vitae eligendi voluptatem eum quas sed blanditiis commodi, 
+                    
+                    <br><span class="time-reported"><i class="fa fa-clock-o" aria-hidden="true"></i> 2 minutes ago</span>
+                    </li>
+                    <li class="issue"><span class="user-name">[user-name]</span> (0889340008)  <br> <span class="problem-descript">problem description</span>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut tempora officiis possimus porro? Dicta est officiis vitae eligendi voluptatem eum quas sed blanditiis commodi, qui ratione aperiam odio nisi amet. 
+                    
+                    <br><span class="time-reported"><i class="fa fa-clock-o" aria-hidden="true"></i> 2 minutes ago</span>
+                    </li>
+                    <li class="issue"><span class="user-name">[user-name]</span> (0889340008)  <br> <span class="problem-descript">problem description</span>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut tempora officiis possimus porro? Dicta est officiis vitae eligendi voluptatem eum quas sed blanditiis commodi, qui ratione aperiam odio nisi amet. 
+                    
+                    <br><span class="time-reported"><i class="fa fa-clock-o" aria-hidden="true"></i> 2 minutes ago</span>
+                    </li>
+                    <li class="issue"><span class="user-name">[user-name]</span> (0889340008)  <br> <span class="problem-descript">problem description</span>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut tempora officiis possimus porro? Dicta est officiis vitae eligendi voluptatem eum quas sed blanditiis commodi, qui ratione aperiam odio nisi amet. 
+                    
+                    <br><span class="time-reported"><i class="fa fa-clock-o" aria-hidden="true"></i> 2 minutes ago</span>
+                    </li>
+                    
+                   </ul>
+                </div>
+              
+            </div>
+
+        <div id="admin-middle" class="middle-section">
+
+            
+
+
+            <div class="dashboard">
+             <div id ="events-form-trigger"  class="dashboard-item">
+              <span class="icon">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+              </span>
+                  <div class="title">
+                    Events
+                  </div>
+             </div>
+
+           
+
+             <div id="reported-trigger" class="dashboard-item">
+              <div id="reported-badge" class="badge">
+                
+              </div>
+              <span class="icon">
+                <i class="mdi mdi-chat-question"></i>
+              </span>
+                <div class="title">
+                    Reported Issues
+                  </div>
+             </div>
+            </div>
+
+
+            <div class="admin-table">   
+               <div class="table-tools">
+
+                    
+
+                      <div id="number-rows" class="input-group">
+                          <div class="select-wrapper">
+                            <select name="rows" name="state" class="custom-select select-row" placeholder="Show" id="maxRows">
+                               <option value="5000">All</option>
+                               <option value="5">5</option>
+                               <option value="10">10</option>
+                               <option value="15">15</option>
+                               <option value="20">20</option>
+                               <option value="50">50</option>
+                               <option value="70">70</option>
+                               <option value="100">100</option>
+                            </select>
+                          </div>
+                    </div>
+
+                    <div id="filter" class="input-group">
+                      <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter">
+                    </div>
+                      
+                     <div class="button-container">
+                        <button id="btnExportToCsv" type="button" class="btn">Export to CSV</button>
+
+                    </div>
+               
+
+
+                      </div>
+
+          
+                    <h2>REGISTERED USERS</h2>
+
+              <table class="user-table order-table" id= "user-table" id="user-sort">
+                  <thead>
+                      <tr >
+                       <th>#</th>
+                        <th>Full Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Phone Number</th>
+                        <th>Location</th>
+                        <th>Highest Education Level</th>
+                        <th>Currently At School</th>
+                        <th>Type of help</th>
+                      </tr>
+                    </thead>
+
+
+                    <tbody>
+
+                      <tr>
+                        <td>Hannah Banda</td>
+                        <td>18</td>
+                        <td>Female</td>
+                        <td>0884512483</td>
+                        <td>Chitipa</td>
+                        <td>MSCE</td>
+                        <td>Yes</td>
+                        <td>Capital</td>
+                      </tr>
+                      <tr>
+                        <td>Patric Harawa</td>
+                        <td>23</td>
+                        <td>Male</td>
+                        <td>0884512483</td>
+                        <td>Rumphi</td>
+                        <td>Diploma</td>
+                        <td>Yes</td>
+                        <td>Fees</td>
+                      </tr>
+                      <tr>
+                        <td>Naomi Zimba</td>
+                        <td>21</td>
+                        <td>Female</td>
+                        <td>0884512483</td>
+                        <td>Blantyre</td>
+                        <td>MSCE</td>
+                        <td>No</td>
+                        <td>Capital</td>
+                      </tr>
+                      <tr>
+                        <td>Dom Banda</td>
+                        <td>35</td>
+                        <td>Male</td>
+                        <td>0884512483</td>
+                        <td>Blantyre</td>
+                        <td>Bachelors Degree</td>
+                        <td>No</td>
+                        <td>Capital</td>
+                      </tr>
+
+
+                      <tr>
+                        <td>Rebecca Zimba</td>
+                        <td>19</td>
+                        <td>Female</td>
+                        <td>0884512483</td>
+                        <td>Mzuzu</td>
+                        <td>MSCE</td>
+                        <td>Yes</td>
+                        <td>Fees</td>
+                      </tr>
+
+                      <tr>
+                        <td>John Phiri</td>
+                        <td>25</td>
+                        <td>Male</td>
+                        <td>0884512483</td>
+                        <td>Zomba</td>
+                        <td>Bachelors Degree</td>
+                        <td>No</td>
+                        <td>Employment</td>
+                      </tr>
+
+                      <tr>
+                        <td>Andre Nyirongo</td>
+                        <td>22</td>
+                        <td>Male</td>
+                        <td>0884512483</td>
+                        <td>Karonga</td>
+                        <td>MSCE</td>
+                        <td>No</td>
+                        <td>Capital</td>
+                      </tr>
+
+                    
+                    </tbody>
+              </table>
+
+
+              <div class='pagination-container' >
+                <nav>
+                  <ul class="pagination">
+                    
+                    <li data-page="prev" id="first">
+                            <span> < <span class="sr-only">(current)</span></span>
+                            </li>
+                  <!--	Here the JS Function Will Add the Rows -->
+                <li class="next" data-page="next" id="prev">
+                              <span> > <span class="sr-only">(current)</span></span>
+                            </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            
+
+            
+
+
+        
+        </div>
+
+        
+
+
+
+    </div>
+  
+ </body>
+</html>
